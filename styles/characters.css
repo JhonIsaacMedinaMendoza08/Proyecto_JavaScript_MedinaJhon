@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2a2a3d;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 0.5rem;
+  }
+  
+  .estadisticas input {
+    width: 32%;
+    display: inline-block;
+    margin-right: 2%;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  

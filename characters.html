@@ -6,7 +6,7 @@
     <title>Creacion del personaje</title>
     <link rel="stylesheet" href="./styles/characters.css">
     <script src="./src/api.js" defer></script>
-    <script src="./src/save.js"></script>
+    <script src="./src/save.js" defer></script>
 </head>
 <body>
     <h1>personajes </h1>
@@ -27,14 +27,18 @@
                 </select>
             </label>
             <label>Raza:
-                <select id="breed" required></select>
+                <select id="races" required></select>
             </label>
             <label>Clase:
-                <select id="class" required></select>
+                <select id="classes" required></select>
             </label>
             <label>Armadura:
-                <select id="armor" required></select>
+                <select id="armor" ></select>
+                    <option value=""></option>
             </label>
+            <label>Arma:
+                <input type="text" id="weapon" placeholder="Ej: Espada, Arco..." />
+              </label>
             <label>Estadisticas: </label>
                 <div class="statistics">
                     <input type="number" id="force" placeholder="Fuerza" required>
@@ -45,7 +49,7 @@
                 <select id="ability" required></select>
             </label>
             <label>Accesorios:
-                <select id="accessory" required></select>
+                <select id="accessory" ></select>
             </label>
 
             <button type="submit">Guardar Personaje</button>
