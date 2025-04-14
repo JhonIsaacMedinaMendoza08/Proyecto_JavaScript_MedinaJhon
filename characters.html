@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Creacion del personaje</title>
     <link rel="stylesheet" href="./styles/characters.css">
+    <script src="./src/api.js" defer></script>
+    <script src="./src/save.js"></script>
 </head>
 <body>
     <h1>personajes </h1>
+    <header>
+        <h1>Creacion del personaje</h1>
+        <a href="index.html">Volver al inicio</a>
+    </header>
+    <main>
+        <form id="form__character">
+            <label>Nombre:
+                <input type="text" id="name" name="name" required>
+            </label>
+            <label>Genero:
+                <select id="gender" name="gender" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">otro</option>
+                </select>
+            </label>
+            <label>Raza:
+                <select id="breed" required></select>
+            </label>
+            <label>Clase:
+                <select id="class" required></select>
+            </label>
+            <label>Armadura:
+                <select id="armor" required></select>
+            </label>
+            <label>Estadisticas: </label>
+                <div class="statistics">
+                    <input type="number" id="force" placeholder="Fuerza" required>
+                    <input type="number" id="skill" placeholder="Destreza" required>
+                    <input type="number" id="intelligence"  placeholder="Inteligencia" required>
+                </div>
+            <label>Habilidad Especial:
+                <select id="ability" required></select>
+            </label>
+            <label>Accesorios:
+                <select id="accessory" required></select>
+            </label>
+
+            <button type="submit">Guardar Personaje</button>
+        </form>
+    </main>
 </body>
 </html>
