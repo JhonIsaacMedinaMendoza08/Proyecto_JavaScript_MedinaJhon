@@ -11,6 +11,7 @@ document.getElementById("form__character").addEventListener("submit", (e) => {
         force: document.getElementById("force").value,
         skill: document.getElementById("skill").value,
         intelligence: document.getElementById("intelligence").value,
+        accesories: document.getElementById("accessory").value,
     };
     console.log(character);
     saveCharacter(character)

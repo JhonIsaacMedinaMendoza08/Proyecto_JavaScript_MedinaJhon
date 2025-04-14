@@ -1,0 +1,33 @@
+
+
+
+
+/*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
+footer {
+    background-color: #4a4a4a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .div__footer {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .div__footer a,
+  .div__footer p {
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat-SemiBold";
+    font-size: 18px;
+  }
+  .div__footer a img {
+    width: 50px;
+    height: 50px;
+  }
+  
