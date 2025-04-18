@@ -1,19 +1,23 @@
 :root{
     --color-1: #000000;
-    --color-2: #761CBC;
+    --color-2: #e61212;
     --color-3: #EDE9FF;
 
 }
 
 @font-face {
     font-family: "Montserrat-Bold";
-    src: url(../storage/fonts/Montserrat/Montserrat-Bold.ttf)
+    src: url(../assets/fonts/Montserrat/Montserrat-Bold.ttf)
 }
 @font-face {
     font-family: "Montserrat-Regular";
-    src: url(../storage/fonts/Montserrat/Montserrat-Regular.ttf)
+    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf)
 }
 @font-face {
     font-family: "Montserrat-Medium";
-    src: url(../storage/fonts/Montserrat/Montserrat-Medium.ttf)
+    src: url(../assets/fonts/Montserrat/Montserrat-Medium.ttf)
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url(../assets/fonts/Montserrat/Montserrat-SemiBold.ttf)
 }
