@@ -19,12 +19,13 @@ header {
   border-bottom: 3px solid var(--color-2);
   position: fixed;
   top: 0;
-  left: 0;
+  left: 0;  
+  z-index: +1000;
 }
 
 .logo img {
   width: 180px;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,8 +43,120 @@ header {
   margin: 10px;
 
 }
+.info__Section{
+  background: #ebebe6;
+  background-image: url(../assets/dyd__mainImage.jpg); 
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
+  top: 100px;
+  left: 0;
+  z-index: 1;
+}
+.background-image-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.main__content {
+  position: relative;
+  max-width: 1450px;
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  grid-template-areas: "main__content__left main__content__Right";
+}
 
+.main__content__left {
+  grid-area: main__content__left;
+}
+.main__content__left h1 {
+  font-size: 55px;
+  font-family: "Montserrat-SemiBold";
+  color: #fff;
+  margin: 20px;
+}
+.main__content__left p{
+  font-size: 25px;
+  font-family: "Montserrat-Medium";
+  color: #fff;
+  margin: 20px;
+}
+.main__content__Right {
+  grid-area: main__content__Right;
+}
+.main__content__Right iframe{
+  width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  z-index: +1000;
+}
 
+/*ENCUENTRA TUS AMIGOS EN LINEA PARA JUGAR D&D*/
+.findFriends_toPlay {
+  background-image: url(/assets/DYD_search_friends\ .jpg);
+  background-size: cover;
+  background-position: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+}
+.findFriends_toPlay__content {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  padding: 20px;
+
+}
+.findFriends_toPlay__content h2{
+  font-size: 50px;
+  font-family: "Montserrat-SemiBold";
+  color: var(--color-3);
+  text-align: center;
+}
+.findFriends_toPlay__content p{
+  font-size: 20px;
+  font-family: "Montserrat-Medium";
+  color: var(--color-3);
+}
+.findFriends_toPlay__content a{
+  font-size: 20px;
+  font-family: "Montserrat-Medium";
+  color: var(--color-3);
+  text-decoration: none;
+  max-width: 300px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-2);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 /*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
 footer {
   width: 100%;
@@ -58,6 +171,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: +1;
 }
 
 .div__footer {
