@@ -1,27 +1,36 @@
 document.getElementById("form__character").addEventListener("submit", (e) => {
-    e.preventDefault();
-
+    e.preventDefault(); 
+    // Crea un objeto 'character' con los valores seleccionados o escritos por el usuario
     const character = {
-        name: document.getElementById("name").value,
-        gender: document.getElementById("gender").value,
-        races: document.getElementById("races").value,
-        classes: document.getElementById("classes").value,
-        armor: document.getElementById("armor").value,
-        weapon: document.getElementById("weapon").value,
-        force: document.getElementById("force").value,
-        skill: document.getElementById("skill").value,
-        intelligence: document.getElementById("intelligence").value,
-        ability: document.getElementById("ability").value,
-        accesories: document.getElementById("accessories").value,
+        name: document.getElementById("name").value,                  // Nombre 
+        gender: document.getElementById("gender").value,              // Género
+        races: document.getElementById("races").value,                // Raza
+        classes: document.getElementById("classes").value,            // Clase
+        armor: document.getElementById("armor").value,                // Armadura seleccionada
+        weapon: document.getElementById("weapon").value,              // Arma seleccionada
+        force: document.getElementById("force").value,                // Valor de fuerza
+        skill: document.getElementById("skill").value,                // Valor de habilidad
+        intelligence: document.getElementById("intelligence").value,  // Valor de inteligencia
+        ability: document.getElementById("ability").value,            // Hechizo o habilidad mágica
+        accesories: document.getElementById("accessories").value      // Accesorio o equipo de aventura
     };
-    console.log(character);
-    saveCharacter(character)
-})
+    console.log(character); // Muestra el objeto en consola para verificar su contenido
+    // Llama a la función que guarda el personaje en localStorage
+    saveCharacter(character);
+});
+
+// Función que guarda un personaje en localStorage
 function saveCharacter(character) {
+    // Obtiene los personajes previamente guardados, o crea un array vacío si no hay ninguno
     const savedCharacters = JSON.parse(localStorage.getItem("characters")) || [];
+    // Agrega el nuevo personaje al array
     savedCharacters.push(character);
+    // Guarda el array actualizado en localStorage como string
     localStorage.setItem("characters", JSON.stringify(savedCharacters));
+    // Muestra en consola todos los personajes guardados
     console.log(savedCharacters);
-    alert("¡Character saved successfully!");
+    // Alerta al usuario que el personaje fue guardado
+    alert("💾 ¡Character saved successfully! 💾");
+    // Resetea el formulario para limpiar los campos
     document.getElementById("form__character").reset();
 }
