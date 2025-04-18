@@ -118,7 +118,7 @@ header {
   padding: 20px;
   border-radius: 20px;
   margin-top: 180px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .findFriends_toPlay__content {
   background: rgba(0, 0, 0, 0.5);
@@ -150,13 +150,67 @@ header {
   max-width: 300px;
   width: 100%;
   height: 50px;
-  background-color: var(--color-2);
+  background: linear-gradient(120deg , #592415e0 1%, #f60303 80%);
+  border: 1px solid #f60303;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
+/*AREA DE INFORMACION AL RESPECTO DEL JUEGUITO */
+.whatIsDD__Section {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  background-image:  url(../assets/DND_InfoAboutGame.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+.whatIsDD__Section__content{
+  display: flex;
+}
+.whatIsDD__content {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--color-3);
+}
+.whatIsDD__title{
+  padding: 10px;
+}
+.whatIsDD__title h2{
+  font-size: 50px;
+  font-family: "Montserrat-SemiBold";
+  color: var(--color-3);
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.whatIsDD__content p{
+  font-size: 20px;
+  font-family: "Montserrat-Medium";
+  color: var(--color-3);
+  text-align: justify;
+  
+  
+}
+
+.whatIsDD__image img{
+  max-width: 800px;
+  width: 100%;
+
+}
+
+
+
 /*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
 footer {
   width: 100%;
