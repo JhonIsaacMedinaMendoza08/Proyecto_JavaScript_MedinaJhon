@@ -20,7 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Habilidad Especial:</strong>${character.ability}</p>
         <p><strong>Accesorios:</strong> ${character.accesories}</p>
         <a href="details.html?id=${index}">Ver Detalles</a>
+        <button class="btn-eliminar" onclick="eliminarPersonaje(${index})">Eliminar</button>
+
 `
         container.appendChild(card)
     });
 });
+
+function eliminarPersonaje(index) {
+    const confirmacion = confirm("¿Estás seguro de que quieres eliminar este personaje?");
+    if (!confirmacion) return;
+  
+    const characters = JSON.parse(localStorage.getItem("characters")) || [];
+    characters.splice(index, 1); 
+  
+    localStorage.setItem("characters", JSON.stringify(characters)); 
+    location.reload();
+  }
+  
