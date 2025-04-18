@@ -16,16 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Clase:</strong> ${character.classes}</p>
         <p><strong>Armadura:</strong> ${character.armor}</p>
         <p><strong>Arma:</strong> ${character.weapon}</p>
-        <p><strong>Estadísticas:</strong> Fuerza: ${character.force}, Destreza: $    {personaje.destreza}, Inteligencia: ${character.intelligence}</p>
-        <p><strong>Habilidad Especial:</strong> ${character.skill}</p>
+        <p><strong>Estadísticas:</strong> Fuerza: ${character.force}, Destreza: ${character.skill}, Inteligencia: ${character.intelligence}</p>
+        <p><strong>Habilidad Especial:</strong>${character.ability}</p>
         <p><strong>Accesorios:</strong> ${character.accesories}</p>
-        <button onclick="verDetalle(${index})">Ver Detalles</button>;`
+        <a href="details.html?id=${index}">Ver Detalles</a>
+`
         container.appendChild(card)
     });
 });
-
-
-function seeDetails(index) {
-    // Puedes redirigir a una página detalle.html y pasar el índice por URL si deseas
-    alert(`Detalle del personaje ${index + 1} - Próximamente`);
-}
