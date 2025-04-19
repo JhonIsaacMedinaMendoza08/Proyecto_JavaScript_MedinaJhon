@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2>${character.name}</h2>
             <p><strong>Race:</strong> ${character.races}</p>
             <p><strong>Class:</strong> ${character.classes}</p>
-            <a href="details.html?id=${index}">See Details</a> 
+            <p><strong>Habilidad Especial:</strong> ${character.ability}</p>
+            <a href="details.html?id=${index}">See Details</a>
             <button class="btn-delete" onclick="deleteCharacter(${index})">Delete</button> 
         `;
         container.appendChild(card);
