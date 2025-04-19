@@ -250,66 +250,116 @@ footer {
   width: 30px;
   height: 30px;
 }
-
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
+/*AREA DE RESPONSIVE PARA TODO TIPO DE PANTALLAS*/
+/* Breakpoint: pantallas grandes (desde 1200px en adelante) */
+@media screen and (min-width: 1200px) {
+  .main__content__left h1 {
+    font-size: 60px;
   }
 
-  .logo img {
-    width: 140px;
-    height: auto;
+  .main__content__left p {
+    font-size: 23px;
   }
 
-  .referencies__intoPage a {
-    font-size: 16px;
-    margin: 5px;
+  .main__content__Right iframe {
+    width: 700px;
+    height: 420px;
   }
 
-  .info__Section {
-    height: auto;
-    flex-direction: column;
-    padding: 40px 20px;
+  .findFriends_toPlay__content h2 {
+    font-size: 48px;
   }
 
+  .findFriends_toPlay__content p,
+  .findFriends_toPlay__content a {
+    font-size: 20px;
+  }
+
+  .whatIsDD__title h2 {
+    font-size: 48px;
+  }
+
+  .whatIsDD__content p {
+    font-size: 20px;
+  }
+}
+
+/* Breakpoint: tablets grandes (992px a 1199px) */
+@media screen and (max-width: 1199px) {
+  .main__content__Right iframe {
+    width: 600px;
+    height: 300px;
+  }
+
+  .main__content__left h1 {
+    font-size: 48px;
+  }
+
+  .main__content__left p {
+    font-size: 22px;
+  }
+
+  .whatIsDD__image img {
+    max-width: 100%;
+  }
+}
+
+/* Breakpoint: tablets pequeñas (768px a 991px) */
+@media screen and (max-width: 991px) {
+  header{
+    padding: 20px;
+    height: 120px;
+  }
   .main__content {
     grid-template-columns: 1fr;
     grid-template-areas:
       "main__content__left"
       "main__content__Right";
-    height: auto;
-  }
-
-  .main__content__left h1 {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .main__content__left p {
-    font-size: 18px;
-    text-align: center;
+    margin-top: 170px;
   }
 
   .main__content__Right iframe {
-    width: 100%;
-    height: 250px;
+    height: 300px;
   }
 
   .findFriends_toPlay {
+    width: 90%;
     flex-direction: column;
     height: auto;
   }
 
   .findFriends_toPlay__content {
     width: 100%;
-    height: auto;
-    padding: 10px;
+  }
+  .whatIsDD__Section{
+    width: 95%;
+  }
+  .whatIsDD__Section__content {
+    flex-direction: column;
+
+  }
+
+  .whatIsDD__image img {
+    width: 100%;
+  }
+}
+
+/* Breakpoint: móviles grandes (481px a 767px) */
+@media screen and (max-width: 767px) {
+  .main__content__left h1 {
+    font-size: 36px;
+  }
+
+  .main__content__left p {
+    font-size: 18px;
+  }
+
+  .main__content__Right iframe {
+    height: 200px;
   }
 
   .findFriends_toPlay__content h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .findFriends_toPlay__content p,
@@ -317,41 +367,193 @@ footer {
     font-size: 16px;
   }
 
-  .whatIsDD__Section__content {
-    flex-direction: column;
-  }
-
-  .whatIsDD__image img {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
   .whatIsDD__title h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .whatIsDD__content p {
     font-size: 16px;
   }
 
+  .logo img {
+    width: 120px;
+  }
+
+  .referencies__intoPage a {
+    font-size: 14px;
+  }
+}
+
+/* Breakpoint: móviles pequeños (320px a 480px) */
+@media screen and (max-width: 480px) {
+  .main__content{
+    margin-top: 100px;
+  }
+  .main__content__left h1 {
+    font-size: 28px;
+  }
+
+  .main__content__left p {
+    font-size: 16px;
+  }
+
+  .main__content__Right iframe {
+    width: 350px;
+    height: 180px;
+  }
+  .findFriends_toPlay{
+    margin-top: 120px;
+  }
+  .findFriends_toPlay__content h2 {
+    font-size: 24px;
+  }
+
+  .findFriends_toPlay__content p,
+  .findFriends_toPlay__content a {
+    font-size: 14px;
+  }
+  .whatIsDD__Section{
+    margin-top: -20px;
+  }
+  .whatIsDD__title h2 {
+    font-size: 24px;
+  }
+
+  .whatIsDD__content p {
+    font-size: 14px;
+  }
+
   footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
+    padding: 20px 10px;
   }
 
   .div__footer {
     flex-direction: row;
+    align-items: center;
+    text-align: center;
     gap: 10px;
   }
 
   .div__footer a,
   .div__footer p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .div__footer a img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main__content__left h1 {
+    font-size: 24px;
+  }
+
+  .main__content__left p {
+    font-size: 14px;
+  }
+
+  .main__content__Right iframe {
+    margin-left: -7px;
+
+    height: 160px;
+  }
+
+  .findFriends_toPlay__content h2 {
+    font-size: 20px;
+  }
+
+  .findFriends_toPlay__content p,
+  .findFriends_toPlay__content a {
+    font-size: 13px;
+  }
+
+  .whatIsDD__title h2 {
+    font-size: 20px;
+  }
+
+  .whatIsDD__content p {
+    font-size: 13px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  footer {
+    padding: 15px 8px;
+  }
+
+  .div__footer {
+    gap: 8px;
+  }
+
+  .div__footer a,
+  .div__footer p {
+    font-size: 13px;
+  }
+
+  .div__footer a img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main__content{
+    margin-top: 30px;
+  }
+  .main__content__left h1 {
+    font-size: 20px;
+  }
+
+  .main__content__left p {
+    font-size: 13px;
+  }
+
+  .main__content__Right iframe {
+    height: 140px;
+  }
+  .findFriends_toPlay{
+    margin-top: 120px;
+  }
+  .findFriends_toPlay__content h2 {
+    font-size: 18px;
+  }
+
+  .findFriends_toPlay__content p,
+  .findFriends_toPlay__content a {
+    font-size: 12px;
+  }
+
+  .whatIsDD__title h2 {
+    font-size: 18px;
+  }
+
+  .whatIsDD__content p {
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+
+  footer {
+    padding: 12px 6px;
+  }
+
+  .div__footer {
+    gap: 6px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .div__footer a,
+  .div__footer p {
+    font-size: 12px;
+  }
+
+  .div__footer a img {
+    width: 16px;
+    height: 16px;
   }
 }
