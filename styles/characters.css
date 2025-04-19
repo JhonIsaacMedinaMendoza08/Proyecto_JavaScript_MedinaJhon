@@ -1,40 +1,157 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #1e1e2f;
-    color: #fff;
-    padding: 2rem;
+@import url(../styles/variables.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+/*AREA DEL DISENO DEL HEADER IGUAL EN TODAS LAS PANTALLAS*/
+header {
+  background-color: #e7e7db;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 3px solid var(--color-2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: +1000;
+}
+
+.logo img {
+  width: 180px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.referencies__intoPage {
+  text-align: center;
+}
+
+.referencies__intoPage a {
+  color: var(--color-1);
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Montserrat-SemiBold";
+  margin: 10px;
+}
+
+.referencies__intoPage a:hover {
+  color: var(--color-2);
+}
+/*FIN DEL AREA DEL DISEÑO DEL HEADER*/
+
+/*AREA DEL DISEÑO DEL MAIN*/
+main{
+  margin-top: 100px;
+  background-image: url(../assets/dungeons-and-dragons-createbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #000000c6;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+  color: var(--color-3);
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+}
+input,
+select,
+button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  color: var(--color-1);
+}
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.statistics input {
+  width: 100%;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: #3e8e41;
   }
-  
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #2a2a3d;
-    padding: 2rem;
-    border-radius: 10px;
+
+/*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
+footer {
+  width: 100%;
+  background-color: #4a4a4a;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: +1;
+}
+
+.div__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.div__footer a,
+.div__footer p {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+}
+
+.div__footer a img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+@media screen and (min-width: 600px) {
+  .statistics {
+    flex-direction: row;
+    gap: 1rem;
   }
-  
-  label {
-    display: block;
-    margin-bottom: 1rem;
+  .statistics input {
+    flex: 1;
   }
-  
-  input, select, button {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
-    margin-top: 0.5rem;
-  }
-  
-  .estadisticas input {
-    width: 32%;
-    display: inline-block;
-    margin-right: 2%;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
-  }
-  
+}
