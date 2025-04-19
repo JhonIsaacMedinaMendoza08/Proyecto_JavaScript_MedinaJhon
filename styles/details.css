@@ -49,7 +49,7 @@ main{
 
 
 /*AREA DE LA CARTA DONDE SE MUESTRA INFORMACION RELACIONADA AL PERSONAJE EN ESPECIFICO*/
-.card{
+.card {
   background-image: url(../assets/card-board-game-dnd.webp);
   background-size: cover;
   background-position: center;
@@ -58,11 +58,27 @@ main{
   max-width: 700px;
   height: auto;
   margin: 0 auto;
-  color: var(--color-1);
+  color: var(--color-3);
   text-align: center;
   border: 3px solid var(--color-3);
   margin-bottom: 3rem;
+  position: relative; 
+  overflow: hidden;  
+  z-index: 0;
 }
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+  border-radius: 60px; 
+  z-index: -1; 
+}
+
 .card h2{
   font-family: "Montserrat-SemiBold";
   font-size: 30px;

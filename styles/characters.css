@@ -44,19 +44,37 @@ header {
 }
 
 .referencies__intoPage a:hover {
-  color: var(--color-2);
+  color: var(--color-6);
 }
-/*FIN DEL AREA DEL DISEÑO DEL HEADER*/
 
 /*AREA DEL DISEÑO DEL MAIN*/
-main{
+main {
+  position: relative;
   margin-top: 70px;
-  background-image: url(../assets/dungeons-and-dragons-createbackground.jpg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url(../assets/dndCreateCharacters.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-
+  z-index: 0; 
 }
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad según lo oscuro que lo quieras */
+  z-index: -1; 
+}
+
 form {
   max-width: 800px;
   margin: 0 auto;

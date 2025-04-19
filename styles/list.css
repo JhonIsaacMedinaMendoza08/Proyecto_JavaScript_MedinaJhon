@@ -43,7 +43,7 @@ header {
 }
 
 .referencies__intoPage a:hover {
-  color: var(--color-2);
+  color: var(--color-5);
 }
 /*FIN DEL AREA DEL DISEÑO DEL HEADER*/
 main {
@@ -75,7 +75,7 @@ main {
 .characterCard {
   max-width: 400px;
   width: 100%;
-  background-color: #f4f4f4a3;
+  background-color: #000000a3;
   border: 3px solid var(--color-5);
   border-radius: 12px;
   padding: 16px;
@@ -85,6 +85,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  color: var(--color-3);
 }
 
 .characterCard:hover {
@@ -93,7 +94,6 @@ main {
 
 .characterCard h2 {
   font-size: 22px;
-  color: var(--color-1);
   margin-bottom: 8px;
   font-family: "Montserrat-Bold";
 }
