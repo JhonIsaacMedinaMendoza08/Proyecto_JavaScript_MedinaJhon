@@ -8,7 +8,7 @@
 }
 
 header {
-  background-color: #e7e7db;
+  background-color: #000000;
   width: 100%;
   height: 70px;
   display: flex;
@@ -36,7 +36,7 @@ header {
 }
 
 .referencies__intoPage a {
-  color: var(--color-1);
+  color: var(--color-3);
   text-decoration: none;
   font-size: 20px;
   font-family: "Montserrat-SemiBold";
@@ -49,6 +49,8 @@ header {
 .info__Section{
   background: #ebebe6;
   background-image: url(../assets/dyd__mainImage.jpg); 
+  border-bottom-left-radius:30px ;
+  border-bottom-right-radius:30px ;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -82,6 +84,11 @@ header {
   padding: 20px;
   border-radius: 10px;
   grid-template-areas: "main__content__left main__content__Right";
+}
+
+
+main{
+  background: #000000;
 }
 
 .main__content__left {
@@ -170,8 +177,8 @@ header {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 20px;
   border-radius: 20px;
+
 
 }
 .whatIsDD__Section__content{

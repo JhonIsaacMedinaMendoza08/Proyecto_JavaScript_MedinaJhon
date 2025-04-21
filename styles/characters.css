@@ -122,7 +122,16 @@ button {
 button:hover {
   background-color: #3e8e41;
   }
+/*SECCION DERECHA DE LA INFORMACION DEL PERSONAJE*/
+.sectionRight__InfoCharacter{
+  max-width: 800px;
+  padding: 1rem;
+  background-color: #ffffff;
 
+}
+.character__info{
+
+}
 /*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
 footer {
   width: 100%;

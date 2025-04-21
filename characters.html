@@ -20,52 +20,75 @@
       </div>
     </header>
     <main>
-      <form id="form__character">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+      <section>
+        <form id="form__character">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-          <option value="masculino">Male</option>
-          <option value="femenino">Female</option>
-          <option value="otro">Other</option>
-        </select>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="masculino">Male</option>
+            <option value="femenino">Female</option>
+            <option value="otro">Other</option>
+          </select>
 
-        <label for="races">Races:</label>
-        <select id="races" required></select>
+          <label for="races">Races:</label>
+          <select id="races" required>
+            <option value=""></option>
+          </select>
 
-        <label for="classes">Class:</label>
-        <select id="classes" required></select>
+          <label for="classes">Class:</label>
+          <select id="classes" required>
+            <option value=""></option>
+          </select>
 
-        <label for="armor">Armor:</label>
-        <select id="armor" required>
-        </select>
+          <label for="armor">Armor:</label>
+          <select id="armor" required>
+            <option value=""></option>
+          </select>
 
-        <label for="weapon">Weapon:</label>
-        <select id="weapon" required>
-          <!-- <option value=""></option> -->
-        </select>
+          <label for="weapon">Weapon:</label>
+          <select id="weapon" required>
+            <!-- <option value=""></option> -->
+          </select>
 
-        <label>Statistics:</label>
-        <div class="statistics">
-          <input type="number" id="force" placeholder="Force" required />
-          <input type="number" id="skill" placeholder="Skill" required />
-          <input
-            type="number"
-            id="intelligence"
-            placeholder="Intelligence"
-            required
-          />
-        </div>
+          <label>Statistics:</label>
+          <div class="statistics">
+            <input
+              type="number"
+              id="force"
+              placeholder="Force"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="skill"
+              placeholder="Skill"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="intelligence"
+              placeholder="Intelligence"
+              max="20"
+              required
+            />
+          </div>
 
-        <label for="ability">Special Ability:</label>
-        <select id="ability" required></select>
+          <label for="ability">Special Ability:</label>
+          <select id="ability" required></select>
 
-        <label for="accessories">Accessories:</label>
-        <select id="accessories" required></select>
+          <label for="accessories">Accessories:</label>
+          <select id="accessories" required></select>
 
-        <button type="submit">Save Character</button>
-      </form>
+          <button type="submit">Create Character</button>
+        </form>
+      </section>
+      <section class="sectionRight__InfoCharacter">
+        <div id="infoCharacter" class="character__info"></div>
+      </section>
     </main>
     <footer>
       <div class="div__footer">
