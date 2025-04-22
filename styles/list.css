@@ -196,3 +196,200 @@ footer {
   width: 30px;
   height: 30px;
 }
+
+
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 400px) */
+@media (max-width: 400px) {
+  /* Header */
+  header {
+    height: auto;
+    padding: 10px 0;
+    flex-direction: row;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .referencies__intoPage {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .referencies__intoPage a {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+
+  /* Main */
+  main {
+    padding: 1rem;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  #listCharacters {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .characterCard {
+    max-width: 90%;
+    padding: 12px;
+  }
+
+  .characterCard h2 {
+    font-size: 20px;
+  }
+
+  .characterCard p {
+    font-size: 14px;
+  }
+
+  .race-image {
+    height: 180px;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+  }
+
+  .div__footer {
+    gap: 15px;
+
+  }
+
+  .div__footer a, 
+  .div__footer p {
+    font-size: 1rem;
+  }
+
+  .div__footer a img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Pantallas pequeñas (móviles, 401px a 576px) */
+@media (min-width: 401px) and (max-width: 576px) {
+  /* Header */
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo img {
+    width: 160px;
+    margin-bottom: 0;
+  }
+
+  .referencies__intoPage a {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+
+  /* Main */
+  main {
+    padding: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  #listCharacters {
+    gap: 25px;
+  }
+
+  .characterCard {
+    max-width: 100%;
+  }
+
+  .race-image {
+    height: 180px;
+  }
+  .div__footer{
+    height: 80px;
+  }
+}
+
+/* Pantallas medianas (tablets, 577px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Header */
+  header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .logo img {
+    width: 170px;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .characterCard {
+    max-width: 300px;
+  }
+
+  .race-image {
+    height: 200px;
+  }
+}
+
+/* Pantallas medianas-grandes (769px a 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Header */
+  header {
+    justify-content: space-around;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .characterCard {
+    max-width: 300px;
+  }
+}
+
+/* Pantallas grandes (993px a 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Header */
+  header {
+    justify-content: space-evenly;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pantallas extra grandes (más de 1200px) */
+@media (min-width: 1201px) {
+  /* Header */
+  header {
+    justify-content: space-evenly;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+  }
+}
+
+
