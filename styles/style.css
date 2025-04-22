@@ -172,12 +172,12 @@ main{
 .whatIsDD__Section {
   width: 100%;
   height: auto;
-  margin-bottom: 100px;
+  margin-bottom: 55px;
   background-image:  url(../assets/DND_InfoAboutGame.jpg);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 30px;
 
 
 }
@@ -216,6 +216,7 @@ main{
 .whatIsDD__image img{
   max-width: 800px;
   width: 100%;
+  border-radius: 30px;
 
 }
 
@@ -307,7 +308,13 @@ footer {
   }
 
   .whatIsDD__image img {
-    max-width: 100%;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -417,10 +424,10 @@ footer {
 
   .findFriends_toPlay__content p,
   .findFriends_toPlay__content a {
-    font-size: 14px;
+    font-size: 14px
   }
   .whatIsDD__Section{
-    margin-top: -20px;
+    margin-bottom: 65px;
   }
   .whatIsDD__title h2 {
     font-size: 24px;
@@ -474,7 +481,7 @@ footer {
   .findFriends_toPlay__content a {
     font-size: 13px;
   }
-
+  
   .whatIsDD__title h2 {
     font-size: 20px;
   }
@@ -482,7 +489,9 @@ footer {
   .whatIsDD__content p {
     font-size: 13px;
   }
-
+  .whatIsDD__Section{
+    margin-bottom: 50px;
+  }
   .logo img {
     width: 100px;
   }
@@ -535,7 +544,9 @@ footer {
   .whatIsDD__title h2 {
     font-size: 18px;
   }
-
+  .whatIsDD__Section{
+    margin-bottom: 60px;
+  }
   .whatIsDD__content p {
     font-size: 12px;
   }
