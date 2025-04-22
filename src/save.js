@@ -9,8 +9,11 @@ document.getElementById("form__character").addEventListener("submit", (e) => {
         armor: document.getElementById("armor").value,                // Armadura seleccionada
         weapon: document.getElementById("weapon").value,              // Arma seleccionada
         force: document.getElementById("force").value,                // Valor de fuerza
-        skill: document.getElementById("skill").value,                // Valor de habilidad
+        dexterity: document.getElementById("dexterity").value,                // Valor de habilidad
         intelligence: document.getElementById("intelligence").value,  // Valor de inteligencia
+        constitution: document.getElementById("constitution").value,  // Valor de inteligencia
+        wisdom: document.getElementById("wisdom").value,  // Valor de inteligencia
+        charisma: document.getElementById("charisma").value,  // Valor de inteligencia
         ability: document.getElementById("ability").value,            // Hechizo o habilidad mágica
         accesories: document.getElementById("accessories").value      // Accesorio o equipo de aventura
     };

@@ -44,8 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <p><strong>Weapon:</strong> ${character.weapon}</p>
       <p><strong>Statistics:</strong> <br>
       Force: ${character.force}, <br>
-      Skill: ${character.skill}, <br>
-      Intelligence: ${character.intelligence}</p>
+      Dexterity: ${character.dexterity}, <br>
+      Intelligence: ${character.intelligence}, <br>
+      Constitution: ${character.constitution}, <br>
+      Wisdom: ${character.wisdom}, <br>
+      Charisma: ${character.charisma}</p>
       <p><strong>Special Ability:</strong> ${character.ability}</p>
       <p><strong>Accessories:</strong> ${character.accesories}</p>
     </div>

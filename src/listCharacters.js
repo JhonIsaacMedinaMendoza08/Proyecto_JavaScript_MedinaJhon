@@ -50,3 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(card);
     });
 });
+function deleteCharacter(index) {
+    const confirmacion = confirm("¿Estás seguro de que quieres eliminar este personaje?");
+    if (!confirmacion) return;
+  
+    const characters = JSON.parse(localStorage.getItem("characters")) || [];
+    characters.splice(index, 1); 
+  
+    localStorage.setItem("characters", JSON.stringify(characters)); 
+    location.reload();
+  }

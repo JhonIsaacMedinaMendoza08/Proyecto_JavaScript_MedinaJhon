@@ -130,10 +130,26 @@ document.getElementById("races").addEventListener("change", async (event) => {
         console.error("Error fetching race details: ", error);
     }
 });
-
+const classImages = {
+    "barbarian": "assets/class/barbarian.png",
+    "bard": "assets/class/bard.png",
+    "cleric": "assets/class/cleric.png",
+    "druid": "assets/class/druid.png",
+    "fighter": "assets/class/fighter.png",
+    "monk": "assets/class/monk.png",
+    "paladin": "assets/class/paladin.png",
+    "ranger": "assets/class/ranger.png",
+    "rogue": "assets/class/rogue.png",
+    "sorcerer": "assets/class/sorcerer.png",
+    "wizard": "assets/class/wizard.png",
+    "warlock": "assets/class/warlock.png",
+    "default": "assets/races/default.png" // Imagen por defecto si no se reconoce la raza
+};
 // Función que escucha el cambio de raza y muestra información
 document.getElementById("classes").addEventListener("change", async (event) => {
     const classesIndex = event.target.value;
+    const imageSource = classImages[classesIndex] || classImages["default"];
+
     if (!classesIndex) return;
 
     try {
@@ -142,6 +158,7 @@ document.getElementById("classes").addEventListener("change", async (event) => {
 
         // Formateamos la información que queremos mostrar
         const classInfoHTML = `
+            <img src="${imageSource}" alt="${data.name}" class="race-image" />
             <h2>${data.name}</h2>
             <p><strong>Hit Die:</strong> d${data.hit_die}</p>
             <p><strong>Proficiencies:</strong> ${data.proficiencies.map(p => p.name).join(", ")}</p>
