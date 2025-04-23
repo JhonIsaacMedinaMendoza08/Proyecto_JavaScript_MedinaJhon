@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/characters.css">
-</head>
-<body>
-    <h1>personajes </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create your character</title>
+    <link rel="stylesheet" href="./styles/characters.css" />
+    <script src="./src/api.js" defer type="module"></script>
+    <script src="./src/save.js" defer type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="assets/icons/dnd_logo_big.webp" />
+      </div>
+      <div class="referencies__intoPage">
+        <a href="list.html">See your characters</a>
+        <a href="#">How to play?</a>
+        <a href="index.html">Return</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <form id="form__character">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="masculino">Male</option>
+            <option value="femenino">Female</option>
+            <option value="otro">Other</option>
+          </select>
+
+          <label for="races">Races:</label>
+          <select id="races" required>
+            <option value=""></option>
+          </select>
+
+          <label for="classes">Class:</label>
+          <select id="classes" required>
+            <option value=""></option>
+          </select>
+
+          <label for="armor">Armor:</label>
+          <select id="armor" required>
+            <option value=""></option>
+          </select>
+
+          <label for="weapon">Weapon:</label>
+          <select id="weapon" required>
+            <!-- <option value=""></option> -->
+          </select>
+
+          <label>Statistics:</label>
+          <div class="statistics">
+            <input
+              type="number"
+              id="force"
+              placeholder="Force"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="dexterity"
+              placeholder="Dexterity"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="intelligence"
+              placeholder="Intelligence"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="constitution"
+              placeholder="Constitution"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="wisdom"
+              placeholder="Wisdom"
+              max="20"
+              required
+            />
+            <input
+              type="number"
+              id="charisma"
+              placeholder="Charisma"
+              max="20"
+              required
+            />
+          </div>
+
+          <label for="ability">Special Ability:</label>
+          <select id="ability" required></select>
+
+          <label for="accessories">Accessories:</label>
+          <select id="accessories" required></select>
+
+          <button type="submit">Create Character</button>
+        </form>
+      </section>
+      <section class="sectionRight__InfoCharacter">
+        <div id="infoCharacter" class="character__info">
+          <h2>🧙‍♂️ ¿How to Create Your D&D Character?</h2>
+          <div class="steps">
+            <div class="step">
+              <h3>1. Pick a Race</h3>
+              <p>Agile Elf? Sturdy Dwarf? Each race brings unique traits and advantages.</p>
+            </div>
+            <div class="step">
+              <h3>2. Choose a Class</h3>
+              <p>Fighter, Wizard, Rogue... your class defines your skills and playstyle.</p>
+            </div>
+            <div class="step">
+              <h3>3. Select Your Gear</h3>
+              <p>Choose your weapons, armor, and magical items to start your adventure.</p>
+            </div>
+            <div class="step">
+              <h3>4. Assign Your Stats</h3>
+              <p>Distribute your ability scores: Strength, Dexterity, Intelligence and more.</p>
+            </div>
+            <div class="step">
+              <h3>5. Select Your Special Ability</h3>
+              <p>Your origin story gives depth and personality to your character.</p>
+            </div>
+            <div class="step">
+              <h3>6. Select Your accessories</h3>
+              <p>Your origin story gives depth and personality to your character.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="div__footer">
+        <a href="https://github.com/JhonIsaacMedinaMendoza08" target="_blank"
+          >By: Jhon Isaac Medina Mendoza
+        </a>
+        <p>2025</p>
+        <a href="https://www.facebook.com/JhonIsaacMedina" target="_blank"
+          ><img src="./assets/icons/Facebook_Logo.png" alt=""
+        /></a>
+        <a href="https://www.instagram.com/isaacmedinam/" target="_blank"
+          ><img src="./assets/icons/Instagram_icon.png" alt=""
+        /></a>
+        <a href="https://github.com/JhonIsaacMedinaMendoza08" target="_blank"
+          ><img src="./assets/icons/github_Logo.png" alt=""
+        /></a>
+      </div>
+    </footer>
+  </body>
 </html>

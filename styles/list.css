@@ -1,0 +1,395 @@
+@import url(../styles/variables.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+/*AREA DEL DISENO DEL HEADER IGUAL EN TODAS LAS PANTALLAS*/
+header {
+  background-color: #000000;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 3px solid var(--color-5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: +1000;
+}
+
+.logo img {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.referencies__intoPage {
+  text-align: center;
+}
+
+.referencies__intoPage a {
+  color: var(--color-3);
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Montserrat-SemiBold";
+  margin: 10px;
+}
+
+.referencies__intoPage a:hover {
+  color: var(--color-5);
+}
+/*FIN DEL AREA DEL DISEÑO DEL HEADER*/
+main {
+    min-height: 100vh; /* Ocupa al menos el 80% del alto visible de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-image: url(../assets/Dungeons-and-Dragons-backgroundListCharacters.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+/* ESTILOS PARA EL MAIN DE LISTA DE PERSONAJES */
+#listCharacters {
+  margin-top: 70px;
+  margin-bottom: 55px;
+  padding: 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+.characterCard {
+  max-width: 350px;
+  width: 100%;
+  background-color: #000000a3;
+  border: 3px solid var(--color-1);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-3);
+  text-align: center;
+}
+
+.characterCard:hover {
+  transform: translateY(-10px);
+  background-color: #676666 ;
+}
+
+.characterCard h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-family: "Montserrat-Bold";
+}
+
+.characterCard p {
+  font-size: 16px;
+  margin: 4px 0;
+  font-family: "Montserrat-Regular";
+}
+.characterCard p strong {
+  font-size: 16px;
+  margin: 4px 0;
+  font-family: "Montserrat-Bold";
+}
+
+.characterCard .tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+  background-color: var(--color-2);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.characterCard a {
+  text-decoration: none;
+  color: var(--color-3);
+  width: 200px;
+  height: 30px;
+  font-family: "Montserrat-SemiBold";
+  background-color: var(--color-4);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.characterCard a:hover {
+  background-color: #184ca7;
+}
+.btn-delete {
+  background-color: var(--color-2);
+  color: var(--color-3);
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Montserrat-SemiBold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-delete:hover {
+  background-color: #a71818;
+}
+.race-image {
+  width: 70%;
+  height: 200px;
+  display: flex;
+}
+
+/*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
+footer {
+  width: 100%;
+  background-color: #4a4a4a;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: +1;
+}
+
+.div__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.div__footer a,
+.div__footer p {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+}
+
+.div__footer a img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 400px) */
+@media (max-width: 400px) {
+  /* Header */
+  header {
+    height: auto;
+    padding: 10px 0;
+    flex-direction: row;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .referencies__intoPage {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .referencies__intoPage a {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+
+  /* Main */
+  main {
+    padding: 1rem;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  #listCharacters {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .characterCard {
+    max-width: 90%;
+    padding: 12px;
+  }
+
+  .characterCard h2 {
+    font-size: 20px;
+  }
+
+  .characterCard p {
+    font-size: 14px;
+  }
+
+  .race-image {
+    height: 180px;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+  }
+
+  .div__footer {
+    gap: 15px;
+
+  }
+
+  .div__footer a, 
+  .div__footer p {
+    font-size: 1rem;
+  }
+
+  .div__footer a img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Pantallas pequeñas (móviles, 401px a 576px) */
+@media (min-width: 401px) and (max-width: 576px) {
+  /* Header */
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo img {
+    width: 160px;
+    margin-bottom: 0;
+  }
+
+  .referencies__intoPage a {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+
+  /* Main */
+  main {
+    padding: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  #listCharacters {
+    gap: 25px;
+  }
+
+  .characterCard {
+    max-width: 100%;
+  }
+
+  .race-image {
+    height: 180px;
+  }
+  .div__footer{
+    height: 80px;
+  }
+}
+
+/* Pantallas medianas (tablets, 577px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Header */
+  header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .logo img {
+    width: 170px;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .characterCard {
+    max-width: 300px;
+  }
+
+  .race-image {
+    height: 200px;
+  }
+}
+
+/* Pantallas medianas-grandes (769px a 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Header */
+  header {
+    justify-content: space-around;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .characterCard {
+    max-width: 300px;
+  }
+}
+
+/* Pantallas grandes (993px a 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Header */
+  header {
+    justify-content: space-evenly;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pantallas extra grandes (más de 1200px) */
+@media (min-width: 1201px) {
+  /* Header */
+  header {
+    justify-content: space-evenly;
+  }
+
+  /* Main */
+  #listCharacters {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+  }
+}
+
+

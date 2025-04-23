@@ -1,0 +1,465 @@
+@import url(../styles/variables.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+/*AREA DEL DISENO DEL HEADER IGUAL EN TODAS LAS PANTALLAS*/
+header {
+  background-color: #000000;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 3px solid var(--color-6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: +1000;
+}
+
+.logo img {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.referencies__intoPage {
+  text-align: center;
+}
+
+.referencies__intoPage a {
+  color: var(--color-3);
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Montserrat-SemiBold";
+  margin: 10px;
+}
+
+.referencies__intoPage a:hover {
+  color: var(--color-6);
+}
+
+/*AREA DEL DISEÑO DEL MAIN*/
+main {
+  position: relative;
+  margin-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url(../assets/dndCreateCharacters.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0; 
+}
+
+main::before {
+  content: "";
+  padding-bottom: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad según lo oscuro que lo quieras */
+  z-index: -1; 
+}
+
+form {
+  max-width: 800px;
+  width: 150%;
+  margin: 0 auto;
+  background: #000000c6;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+  color: var(--color-3);
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+}
+input,
+select,
+button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  color: var(--color-1);
+}
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.statistics input {
+  width: 100%;
+}
+
+button {
+  background-color: var(--color-6);
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: #3e8e41;
+  }
+/*SECCION DERECHA DE LA INFORMACION DEL PERSONAJE*/
+.sectionRight__InfoCharacter{
+  max-width: 700px;
+  width: 100%;
+  padding: 3rem;
+  background-color: #000000c6;
+  border-radius: 10px;
+
+}
+.race-image{
+  width: 300px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  
+}
+.character__info{
+  text-align: left;
+  color: var(--color-3);
+
+
+}
+.character__info h2{
+  text-align: center;
+  font-family: "Montserrat-Bold";
+  font-size: 30px;
+
+}
+.character__info p{
+  padding: 0.4rem;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+
+
+}
+.character__info p strong{
+  font-family: "Montserrat-Bold";
+
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  background-color: #29294291;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: scale(1.05);
+}
+
+.step h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color:var(--color-3);
+  font-family: "Montserrat-Bold";
+
+}
+
+.step p {
+  font-family: "Montserrat-Regular";
+  font-size: 0.95rem;
+  color: #dcdcdc;
+}
+
+/*FOOTER CON REFERENCIAS A MIS PERFILES EN LAS REDES SOCIALES*/
+footer {
+  width: 100%;
+  background-color: #4a4a4a;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: +1;
+}
+
+.div__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.div__footer a,
+.div__footer p {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+}
+
+.div__footer a img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Pantallas pequeñas (móviles, hasta 576px) */
+@media (max-width: 576px) {
+  /* Header */
+  header {
+    height: auto;
+    padding: 10px 0;
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .referencies__intoPage {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .referencies__intoPage a {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  /* Main */
+  main {
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 170px; /* Más espacio para el header que ahora es más alto */
+  }
+
+  form, .sectionRight__InfoCharacter {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Formulario */
+  .statistics {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en móviles */
+  }
+
+  /* Información del personaje */
+  .race-image {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .character__info h2 {
+    font-size: 24px;
+  }
+
+  /* Footer */
+  footer {
+    height: 130px;
+    position: relative; /* Cambiado a relative para móviles */
+    flex-direction: row;
+    gap: 20px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div__footer {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* Pantallas medianas (tablets, 577px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Header */
+  header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .referencies__intoPage a {
+    font-size: 18px;
+    margin: 0 8px;
+  }
+
+  /* Main */
+  main {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  form, .sectionRight__InfoCharacter {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Información del personaje */
+  .race-image {
+    width: 250px;
+    height: 375px;
+  }
+
+  /* Steps */
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Pantallas medianas-grandes (769px a 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Header */
+  header {
+    justify-content: space-around;
+  }
+
+  .logo img {
+    width: 170px;
+  }
+
+  /* Main */
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .sectionRight__InfoCharacter {
+    width: 55%;
+  }
+
+  /* Steps */
+  .steps {
+
+  }
+  .step p{
+    font-size: 14px;
+  }
+}
+
+/* Pantallas grandes (993px a 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Header */
+  header {
+    justify-content: space-evenly;
+  }
+
+  /* Main */
+  main {
+    justify-content: space-around;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .sectionRight__InfoCharacter {
+    width: 50%;
+  }
+}
+
+/* Pantallas extra grandes (más de 1200px) */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  /* Header */
+  header {
+    justify-content: space-evenly;
+  }
+
+  /* Main */
+  main {
+    justify-content: space-evenly;
+  }
+
+  form {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .sectionRight__InfoCharacter {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+/* Ajustes para pantallas con ancho menor a 350px (móviles muy pequeños) */
+@media (max-width: 361px) {
+  header{
+    height: 120px;
+  }
+  main{
+    margin-top: 120px;
+  }
+  .referencies__intoPage a {
+    font-size: 14px;
+  }
+
+  .character__info h2 {
+    font-size: 20px;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+  }
+  .div__footer a{
+    font-size: 0.75rem;
+
+
+  }
+}

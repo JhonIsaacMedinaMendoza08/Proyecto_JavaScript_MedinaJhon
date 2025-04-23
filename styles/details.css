@@ -1,0 +1,234 @@
+@import url(../styles/variables.css);
+
+body {
+  background-image: url(../assets/dnd-detailsBackground.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body::before {
+  content: "";
+  position: fixed; /* o absolute si prefieres */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* nivel de oscuridad */
+  z-index: -1; /* debajo del contenido */
+}
+.headerDetails {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.headerDetails a {
+  text-decoration: none;
+  color: var(--color-3);
+  width: 200px;
+  height: 30px;
+  font-family: "Montserrat-SemiBold";
+  background-color: var(--color-2);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.headerDetails a:hover {
+  background-color: #a71818;
+}
+.headerDetails img{
+  max-width: 600px;
+  width: 90%;
+}
+main{
+}
+
+/*AREA DE LA CARTA DONDE SE MUESTRA INFORMACION RELACIONADA AL PERSONAJE EN ESPECIFICO*/
+.card {
+  background-image: url(../assets/card-board-game-dnd.webp);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  border-radius: 60px;
+  max-width: 700px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  color: var(--color-3);
+  text-align: center;
+  border: 5px solid var(--color-1);
+  box-shadow: 30px 34px 20px rgba(0, 0, 0, 1);
+  margin-bottom: 3rem;
+  position: relative; 
+  overflow: hidden;  
+  z-index: 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  border-radius: 60px; 
+  z-index: -1; 
+}
+
+.card h2{
+  font-family: "Montserrat-SemiBold";
+  font-size: 30px;
+  text-align: center;
+}
+.card p{
+  font-family: "Montserrat-Regular";
+  font-size: 22px;
+}
+.card p strong{
+  font-family: "Montserrat-SemiBold";
+}
+.race-image{
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 400px) */
+@media (max-width: 400px) {
+  /* Header */
+  .headerDetails {
+    margin-bottom: 0.5rem;
+  }
+
+  .headerDetails a {
+    width: 160px;
+    height: 25px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .headerDetails img {
+    max-width: 100%;
+  }
+
+  /* Card */
+  .card {
+    padding: 3rem 1.5rem;
+    border-radius: 40px;
+    width: 85%;
+    background-size: 380px 900px;
+    background-repeat: no-repeat;
+    padding-bottom: 130px;
+    padding-top: 100px;
+
+  }
+
+
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 16px;
+    margin: 0.3rem 0;
+  }
+
+  .race-image {
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Pantallas pequeñas (móviles, 401px a 576px) */
+@media (min-width: 401px) and (max-width: 576px) {
+  .headerDetails a {
+    width: 180px;
+    font-size: 15px;
+  }
+
+  .card {
+    padding: 3rem 1.5rem;
+    border-radius: 40px;
+    width: 85%;
+    background-size: 420px 1100px;
+    background-repeat: no-repeat;
+    padding-bottom: 130px;
+    padding-top: 100px;
+
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card p {
+
+    font-size: 18px;
+  }
+
+  .race-image {
+    max-width: 200px;
+  }
+}
+
+/* Pantallas medianas (tablets, 577px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .card {
+    padding: 3rem;
+    border-radius: 50px;
+    max-width: 600px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+  }
+
+  .card h2 {
+    font-size: 26px;
+  }
+
+  .card p {
+    font-size: 20px;
+    line-height: 0.9;
+  }
+}
+
+/* Pantallas medianas-grandes (769px a 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .card {
+    padding: 6rem 3rem;
+    max-width: 700px;
+    width: 90%;
+  }
+}
+
+/* Pantallas grandes (993px a 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .card {
+    padding: 7rem 4rem;
+  }
+}
+
+
+/* Mejoras para dispositivos táctiles */
+@media (hover: none) {
+  .headerDetails a:hover {
+    background-color: var(--color-2);
+  }
+}
+
+/* Ajuste para Safari en iOS */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+}
