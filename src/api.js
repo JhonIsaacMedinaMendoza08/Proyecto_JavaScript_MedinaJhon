@@ -6,9 +6,6 @@ import { raceImages, classImages } from './dictionaries.js';
 import { loadAllArmors, filterArmorsByClass, showArmorDetails } from './armor.js';
 import { loadWeaponOptions, filterWeaponsByClass, showWeaponDetails } from './weapon.js';
 
-// Variable para almacenar armaduras si es necesario (no usada directamente aquí)
-let allArmors = [];
-
 // Evento principal: cuando el DOM está listo, se cargan las opciones en los select
 document.addEventListener("DOMContentLoaded", () => {
     loadOptions("races", "races");         // Carga razas
