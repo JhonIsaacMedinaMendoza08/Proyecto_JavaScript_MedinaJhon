@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("listCharacters");
 
     // Recupera los personajes del localStorage y los convierte en objeto JS, o un array vacío si no hay nada
-    const characters = JSON.parse(localStorage.getItem("characters")) || []; 
+    const characters = JSON.parse(localStorage.getItem("characters")) || [];
 
     // Si no hay personajes guardados, muestra un mensaje y detiene la ejecución
     if (characters.length === 0) {
@@ -45,18 +45,27 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="details.html?id=${index}">See Details</a> <!-- Link a detalles -->
             <button class="btn-delete" onclick="deleteCharacter(${index})">Delete</button> 
         `;
-        
+
         // Agrega la tarjeta al contenedor principal
         container.appendChild(card);
     });
 });
+
+// Función que elimina un personaje según su índice
 function deleteCharacter(index) {
+    // Muestra una confirmación al usuario antes de eliminar
     const confirmacion = confirm("¿Estás seguro de que quieres eliminar este personaje?");
     if (!confirmacion) return;
-  
+
+    // Recupera los personajes del localStorage
     const characters = JSON.parse(localStorage.getItem("characters")) || [];
-    characters.splice(index, 1); 
-  
-    localStorage.setItem("characters", JSON.stringify(characters)); 
+
+    // Elimina el personaje del array
+    characters.splice(index, 1);
+
+    // Guarda el nuevo array en localStorage
+    localStorage.setItem("characters", JSON.stringify(characters));
+
+    // Recarga la página para actualizar la lista
     location.reload();
-  }
+}

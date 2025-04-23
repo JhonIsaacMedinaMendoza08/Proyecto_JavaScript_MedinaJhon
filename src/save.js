@@ -1,5 +1,5 @@
 document.getElementById("form__character").addEventListener("submit", (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     // Crea un objeto 'character' con los valores seleccionados o escritos por el usuario
     const character = {
         name: document.getElementById("name").value,                  // Nombre 
